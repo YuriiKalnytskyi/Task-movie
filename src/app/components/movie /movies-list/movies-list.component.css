@@ -1,0 +1,12 @@
+.movie{
+  width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap:wrap ;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.pagination{
+  width: 100%;
+  justify-content: center;
+}

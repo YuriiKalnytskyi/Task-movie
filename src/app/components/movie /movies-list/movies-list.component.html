@@ -1,0 +1,10 @@
+<div>
+  <div class="movie">
+    <app-movies-list-card *ngFor="let movie of res.results" [movie]="movie"></app-movies-list-card>
+  </div>
+
+  <div class="pagination">
+    <app-pagination [res]="res" (next_lift)="next(1)" (back_lift)="back(1)" (first_lift)="first()"
+                    (last_lift)="last()"></app-pagination>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.user_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.img_container{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+.img{
+  height: 100%;
+  border-radius: 50%;
+
+}

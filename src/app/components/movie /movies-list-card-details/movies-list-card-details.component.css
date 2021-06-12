@@ -1,0 +1,28 @@
+.movie_detail{
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+
+}
+.movieDetail_container{
+  width: 1300px;
+  height: 600px;
+  margin: 0px auto;
+  display: flex;
+}
+.movieDetail_img{
+  margin-top:30px ;
+}
+.movieDetail_info{
+
+  width: 850px;
+  margin: 30px auto;
+  color: white;
+
+}
+.video{
+  margin-top: 20px;
+  width: 100%;
+  height: 600px;
+  border: none;
+}

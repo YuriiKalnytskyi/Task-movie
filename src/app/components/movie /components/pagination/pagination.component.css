@@ -1,0 +1,15 @@
+.btn{
+  display: flex;
+
+}
+.mat_icon:hover{
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: gold;
+  border-radius: 50%;
+}
+.page{
+  height: 40px;
+  width: 100px;
+}

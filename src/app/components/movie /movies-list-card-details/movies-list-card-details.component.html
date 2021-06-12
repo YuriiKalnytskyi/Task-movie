@@ -1,0 +1,31 @@
+<div>
+  <div [style]="background(movie.backdrop_path)" class="movie_detail">
+    <div class="movieDetail_container">
+      <div class="movieDetail_img">
+        <app-poster-preview [img]="movie.poster_path"></app-poster-preview>
+        <app-stars-rating [starsRating]="movie.vote_average"></app-stars-rating>
+      </div>
+      <div class="movieDetail_info">
+        <h1>{{movie.title}}</h1>
+        <h4>Release Date :{{movie.release_date}}</h4>
+        <div>
+          <app-genres [genres]="movie.genres"></app-genres>
+        </div>
+        <div>
+          <h5>Popularity:{{movie.popularity}}</h5>
+          <h5> Duration:{{movie.runtime}}</h5>
+          <h5> Rating:  {{movie.vote_average}}</h5>
+
+          <div class="movieDetail_title">
+            <h3>Description:</h3>
+            <li>{{movie.overview}}</li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <app-video [movieId]="movie.id"></app-video>
+  </div>
+
+</div>
