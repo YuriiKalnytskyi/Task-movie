@@ -1,15 +1,24 @@
-.btn{
+.btn {
   display: flex;
-
+  background: black;
+  width: 100%;
+  color: white;
 }
-.mat_icon:hover{
+
+.btn1 {
+  display: flex;
+  width: 100%;
+}
+
+.mat_icon:hover {
   align-items: center;
-  width: 30px;
-  height: 30px;
+  transform: scale(1.5);
+
   background: gold;
   border-radius: 50%;
 }
-.page{
+
+.page {
   height: 40px;
   width: 100px;
 }

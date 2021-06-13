@@ -44,4 +44,9 @@ export class PaginationComponent implements OnInit {
     this.last_lift.emit()
   }
 
+  newtem(){
+    // @ts-ignore
+    return  JSON.parse<boolean>(localStorage.getItem('sw'))
+  }
+
 }

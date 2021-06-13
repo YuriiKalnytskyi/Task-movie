@@ -15,7 +15,7 @@ export class MoviesListCardDetailsComponent implements OnInit {
 
   constructor(private movieService:MovieService ,private activatedRoute:ActivatedRoute) {
     this.activatedRoute.params.subscribe(value =>{
-      this.id=value.id
+      this.id=+value.id
       this.movieService.getMovieId(this.id).subscribe(value1 => {
         this.movie=value1
         this.genres=value1.genres
@@ -27,7 +27,7 @@ export class MoviesListCardDetailsComponent implements OnInit {
   }
 
   background(url: string) {
-    return (`background-image: url(https://image.tmdb.org/t/p/original${url})`)
-
+    return (`background-image: linear-gradient(rgba(0,0,0,0.9),
+     rgba(0,0,0,0.5)), url(https://image.tmdb.org/t/p/original${url})`)
   }
 }

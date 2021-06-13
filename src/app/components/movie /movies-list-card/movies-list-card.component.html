@@ -1,8 +1,24 @@
-<div [routerLink]="[movie.id]" class="movie_card">
-  <app-poster-preview [img]="movie.poster_path"></app-poster-preview>
-  <div><p>{{movie.title}}</p></div>
-  <div>
-    <app-stars-rating [starsRating]="movie.vote_average"></app-stars-rating>
+<div class="card_container" *ngIf="newtem()">
+  <div [routerLink]="[movie.id]" class="movie_card">
+    <div class="card_img">
+      <app-poster-preview [img]="movie.poster_path"></app-poster-preview>
+    </div>
+    <div class="card_title"><p>{{movie.title}}</p></div>
+    <div class="card_star">
+      <app-stars-rating [starsRating]="movie.vote_average"></app-stars-rating>
+    </div>
   </div>
+</div>
 
+<div class="card_container1" *ngIf="!newtem()">
+  <div [routerLink]="[movie.id]" class="movie_card">
+    <div class="card_img">
+      <app-poster-preview [img]="movie.poster_path"></app-poster-preview>
+    </div>
+    <div class="card_title"><p>{{movie.title}}</p></div>
+    <div class="card_star">
+      <app-stars-rating [starsRating]="movie.vote_average"></app-stars-rating>
+    </div>
+
+  </div>
 </div>

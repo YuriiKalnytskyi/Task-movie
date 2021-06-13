@@ -18,12 +18,15 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
 import { MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {FormsModule} from "@angular/forms";
 
 
- let routers:Routes=[
+let routers:Routes=[
    {path:'movie' , component:MoviesListComponent},
    {path:'movie/:id' , component:MoviesListCardDetailsComponent},
-   {path:'user' , component:UserInfoComponent}
+   {path:'user' , component:UserInfoComponent},
+
  ]
 
 @NgModule({
@@ -38,7 +41,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MoviesListCardDetailsComponent,
     GenresComponent,
     VideoComponent,
-    UserInfoComponent
+    UserInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule,
     MatIconModule,
     MatButtonModule,
+    MatSlideToggleModule,
     BrowserAnimationsModule,
+    FormsModule,
 
   ],
   providers: [],
