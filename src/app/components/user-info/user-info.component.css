@@ -1,17 +1,19 @@
-.user_container{
+.user_container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   height: 100px;
 }
-.img_container{
+
+.img_container {
   width: 60px;
   height: 60px;
   display: flex;
   justify-content: center;
 }
-.img{
+
+.img {
   height: 100%;
   border-radius: 50%;
 

@@ -1,11 +1,12 @@
-.movie_i{
+.movie_i {
   width: 300px;
   height: 400px;
 
 }
-.movie_img{
+
+.movie_img {
   width: 300px;
   height: 400px;
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
 
 }

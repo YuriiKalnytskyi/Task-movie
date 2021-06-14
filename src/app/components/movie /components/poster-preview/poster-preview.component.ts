@@ -8,12 +8,13 @@ import {Movie} from "../../../../models/Movie";
 })
 export class PosterPreviewComponent implements OnInit {
 
-  movieImg='https://image.tmdb.org/t/p/original'
+  movieImg = 'https://image.tmdb.org/t/p/original'
 
   @Input()
-  img:string
+  img: string
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

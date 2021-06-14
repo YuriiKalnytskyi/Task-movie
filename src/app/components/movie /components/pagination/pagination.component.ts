@@ -11,16 +11,16 @@ export class PaginationComponent implements OnInit {
   res: Res
 
   @Output()
-  next_lift =new EventEmitter()
+  next_lift = new EventEmitter()
 
   @Output()
-  back_lift =new EventEmitter()
+  back_lift = new EventEmitter()
 
   @Output()
-  first_lift =new EventEmitter()
+  first_lift = new EventEmitter()
 
   @Output()
-  last_lift =new EventEmitter()
+  last_lift = new EventEmitter()
 
 
   constructor() {
@@ -36,6 +36,7 @@ export class PaginationComponent implements OnInit {
   back() {
     this.back_lift.emit()
   }
+
   first() {
     this.first_lift.emit()
   }
@@ -44,9 +45,9 @@ export class PaginationComponent implements OnInit {
     this.last_lift.emit()
   }
 
-  newtem(){
+  newtem() {
     // @ts-ignore
-    return  JSON.parse<boolean>(localStorage.getItem('sw'))
+    return JSON.parse<boolean>(localStorage.getItem('sw'))
   }
 
 }

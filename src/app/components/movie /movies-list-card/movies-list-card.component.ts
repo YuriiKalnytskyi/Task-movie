@@ -16,9 +16,9 @@ export class MoviesListCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  newtem(){
+  newtem() {
     // @ts-ignore
-    return  JSON.parse<boolean>(localStorage.getItem('sw'))
+    return JSON.parse<boolean>(localStorage.getItem('sw'))
   }
 
 }

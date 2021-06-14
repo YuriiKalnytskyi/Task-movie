@@ -1,30 +1,34 @@
-.movie_container{
+.movie_container {
   width: 100%;
   background: #e5e0e0;
 }
-.movie_container2{
+
+.movie_container2 {
   width: 100%;
   /*background: black;*/
   background: #000000;
   color: white;
 }
-.movie{
+
+.movie {
   width: 1300px;
   margin: 0 auto;
   display: flex;
-  flex-wrap:wrap ;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
-.movieTwo{
+
+.movieTwo {
   width: 1300px;
   margin: 0 auto;
   display: flex;
-  flex-wrap:wrap ;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
-.pagination{
+
+.pagination {
   width: 100%;
   height: 100px;
   display: flex;
@@ -32,7 +36,7 @@
   align-items: center;
 }
 
-.pagination1{
+.pagination1 {
   background: black;
   width: 100%;
   height: 100px;
@@ -40,22 +44,25 @@
   align-items: center;
   justify-content: center;
 }
-.search1{
+
+.search1 {
   display: flex;
   height: 50px;
   justify-content: center;
   padding: 10px;
   background: black;
 }
-.search{
+
+.search {
   display: flex;
   height: 50px;
   justify-content: center;
   padding: 10px;
-  background:  #e5e0e0;
+  background: #e5e0e0;
 
 }
-.clas_form{
+
+.clas_form {
   width: 300px;
   height: 30px;
   border-radius: 10px;

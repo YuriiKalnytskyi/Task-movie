@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatSlideToggleChange} from "@angular/material/slide-toggle";
 
 @Component({
@@ -10,12 +10,14 @@ export class HeaderComponent implements OnInit {
   // @ts-ignore
   myModel = JSON.parse<boolean>(localStorage.getItem('sw'))
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-  swic(event:MatSlideToggleChange) {
-    this.myModel=event.checked
-    localStorage.setItem('sw',JSON.stringify(this.myModel))
+
+  swic(event: MatSlideToggleChange) {
+    this.myModel = event.checked
+    localStorage.setItem('sw', JSON.stringify(this.myModel))
   }
 }

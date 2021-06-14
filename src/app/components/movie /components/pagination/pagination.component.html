@@ -1,20 +1,20 @@
 <div class="btn" *ngIf="newtem()">
   <mat-icon class="mat_icon" (click)="first()">first_page</mat-icon>
-  <mat-icon class="mat_icon"  (click)="back()">chevron_left</mat-icon>
+  <mat-icon class="mat_icon" (click)="back()">chevron_left</mat-icon>
   <div>
-  <span class="page">Сторінка {{res.page}}</span>
+    <span class="page">Сторінка {{res.page}}</span>
   </div>
-  <mat-icon class="mat_icon"  (click)="next()">navigate_next</mat-icon>
-  <mat-icon class="mat_icon"  (click)="last()">last_page</mat-icon>
+  <mat-icon class="mat_icon" (click)="next()">navigate_next</mat-icon>
+  <mat-icon class="mat_icon" (click)="last()">last_page</mat-icon>
 </div>
 
 <div class="btn1" *ngIf="!newtem()">
   <mat-icon class="mat_icon" (click)="first()">first_page</mat-icon>
-  <mat-icon class="mat_icon"  (click)="back()">chevron_left</mat-icon>
+  <mat-icon class="mat_icon" (click)="back()">chevron_left</mat-icon>
   <div>
     <span class="page">Сторінка {{res.page}}</span>
   </div>
-  <mat-icon class="mat_icon"  (click)="next()">navigate_next</mat-icon>
-  <mat-icon class="mat_icon"  (click)="last()">last_page</mat-icon>
+  <mat-icon class="mat_icon" (click)="next()">navigate_next</mat-icon>
+  <mat-icon class="mat_icon" (click)="last()">last_page</mat-icon>
 </div>
 

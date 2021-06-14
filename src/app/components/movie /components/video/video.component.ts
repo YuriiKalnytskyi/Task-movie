@@ -13,17 +13,17 @@ export class VideoComponent implements OnInit {
   videoUrl: SafeResourceUrl;
   dangerousVideoUrl: string;
   @Input()
-  movieId:number
+  movieId: number
 
-  constructor(private movieService:MovieService,private domSanitizer:DomSanitizer) {
+  constructor(private movieService: MovieService, private domSanitizer: DomSanitizer) {
 
   }
 
   ngOnInit(): void {
     this.movieService.getVideo(this.movieId).subscribe(value => {
-      this.video=value
-      this.videoUrl=this.video.results[0].key
-      this.dangerousVideoUrl = 'https://www.youtube.com/embed/'+this.videoUrl
+      this.video = value
+      this.videoUrl = this.video.results[0].key
+      this.dangerousVideoUrl = 'https://www.youtube.com/embed/' + this.videoUrl
       this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.dangerousVideoUrl)
     })
   }

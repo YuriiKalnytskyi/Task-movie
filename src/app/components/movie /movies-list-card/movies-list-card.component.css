@@ -1,41 +1,45 @@
 
-.card_container{
+.card_container {
   width: 300px;
-  height:500px ;
+  height: 500px;
   background: white;
   border-radius: 10px;
   color: black;
   margin: 15px 0 30px 0;
 
 }
-.card_container1{
+
+.card_container1 {
   width: 300px;
-  height:500px ;
+  height: 500px;
   background: black;
   color: white;
   border-radius: 10px;
   margin: 15px 0 30px 0;
 }
-.card_title{
+
+.card_title {
   padding-left: 15px;
 }
-.card_star{
+
+.card_star {
   display: flex;
   justify-content: center;
   align-items: flex-end;
 
 }
 
-.movie_card{
+.movie_card {
   width: 300px;
   height: 500px;
   margin: 10px 5px 0px 0;
 }
 
-.card_img:hover{
+.card_img:hover {
   transform: scale(0.9);
 }
-.card_container:hover{
+
+.card_container:hover {
   transform: scale(1.03);
   box-shadow: 10px 10px 10px 0 #1c1cb3;
   display: flex;
@@ -43,7 +47,7 @@
   align-items: center;
 }
 
-.card_container1:hover{
+.card_container1:hover {
   transform: scale(1.03);
   /*border:10px 10px 10px 0  solid darkblue ;*/
   box-shadow: 10px 10px 10px 0 red;

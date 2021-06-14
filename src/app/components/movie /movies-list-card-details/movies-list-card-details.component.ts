@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Movie} from "../../../models/Movie";
 import {MovieService} from "../../../services/movie.service";
 import {ActivatedRoute} from "@angular/router";
@@ -9,16 +9,16 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./movies-list-card-details.component.css']
 })
 export class MoviesListCardDetailsComponent implements OnInit {
-  movie:Movie
-  id:number
-  genres:any
+  movie: Movie
+  id: number
+  genres: any
 
-  constructor(private movieService:MovieService ,private activatedRoute:ActivatedRoute) {
-    this.activatedRoute.params.subscribe(value =>{
-      this.id=+value.id
+  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.params.subscribe(value => {
+      this.id = +value.id
       this.movieService.getMovieId(this.id).subscribe(value1 => {
-        this.movie=value1
-        this.genres=value1.genres
+        this.movie = value1
+        this.genres = value1.genres
       })
     })
   }
