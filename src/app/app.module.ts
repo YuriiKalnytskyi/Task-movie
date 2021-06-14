@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './components/header/header.component';
 import {MoviesListComponent} from './components/movie /movies-list/movies-list.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {RouterModule, Routes} from "@angular/router";
 import {MoviesListCardComponent} from './components/movie /movies-list-card/movies-list-card.component';
 import {PosterPreviewComponent} from './components/movie /components/poster-preview/poster-preview.component';
@@ -20,6 +20,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {InterceptorService} from "./services/interceptor.service";
 
 
 let routers: Routes = [
@@ -56,7 +57,12 @@ let routers: Routes = [
     ReactiveFormsModule,
 
   ],
-  providers: [],
+  providers: [
+    {
+    provide:HTTP_INTERCEPTORS,
+    useClass:InterceptorService,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {
