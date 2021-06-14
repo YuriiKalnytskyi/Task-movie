@@ -23,15 +23,15 @@ export class MovieService {
   }
 
   getMovieId(id: number): Observable<Movie> {
-    return this.httpClient.get<Movie>(this.baseUrl + "movie/" + id )
+    return this.httpClient.get<Movie>(this.baseUrl + "movie/" + id)
   }
 
   getVideo(id: number): Observable<Video> {
-    return this.httpClient.get<Video>(this.baseUrl + "movie/" + id + "/videos" )
+    return this.httpClient.get<Video>(this.baseUrl + "movie/" + id + "/videos")
   }
 
   searchFilm(text: string): Observable<Res> {
-    return this.httpClient.get<Res>(this.baseUrl + 'search/movie' +'?query=' + text)
+    return this.httpClient.get<Res>(this.baseUrl + 'search/movie' + '?query=' + text)
   }
 
 }
