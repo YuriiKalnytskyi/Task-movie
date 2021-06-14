@@ -28,4 +28,8 @@ export class MovieService {
     return this.httpClient.get<Video>(this.baseUrl+"movie/"+id+"/videos"+this.API_KEY)
   }
 
+  searchFilm(text: string): Observable<Res> {
+    return this.httpClient.get<Res>(this.baseUrl + 'search/movie' + this.API_KEY + '&query=' + text)
+  }
+
 }

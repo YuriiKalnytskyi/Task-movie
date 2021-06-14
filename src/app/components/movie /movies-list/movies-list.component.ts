@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MovieService} from "../../../services/movie.service";
 import {Res} from "../../../models/Res";
-import {MatSlideToggleChange} from "@angular/material/slide-toggle";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-movies-list',
@@ -11,7 +11,10 @@ import {MatSlideToggleChange} from "@angular/material/slide-toggle";
 export class MoviesListComponent implements OnInit {
   res: Res
 
-
+  searchControl = new FormControl()
+  myGroup = new FormGroup({
+    search: this.searchControl
+  })
 
   constructor(private movieService: MovieService) {
   }
@@ -36,12 +39,24 @@ export class MoviesListComponent implements OnInit {
     this.movieService.getMovie(this.res.total_pages).subscribe(value => this.res = value)
   }
 
-
-
-  newtem(){
+  newtem() {
     // @ts-ignore
-    return  JSON.parse<boolean>(localStorage.getItem('sw'))
+    return JSON.parse<boolean>(localStorage.getItem('sw'))
   }
 
 
+  search() {
+    const searchVelue = this.myGroup.value
+    console.log(searchVelue)
+    if (searchVelue.search === '') {
+      this.movieService.getMovie(1).subscribe(value => {
+        this.res = value
+      })
+    } else {
+      this.movieService.searchFilm(searchVelue.search).subscribe(value => {
+        this.res = value
+      })
+    }
+
+  }
 }

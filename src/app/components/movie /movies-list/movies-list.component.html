@@ -1,4 +1,9 @@
 <!--<mat-slide-toggle (change)="swic($event)" [checked]="myModel">slide me</mat-slide-toggle>-->
+<div [class.search1]="newtem()" [class.search]="!newtem()">
+  <form [formGroup]="myGroup" (input)="search()">
+    <input class="clas_form" type="text" [formControl]="searchControl" placeholder="search">
+  </form>
+</div>
 
 <div class="movie_container2" *ngIf="newtem()" >
   <div class="movie">

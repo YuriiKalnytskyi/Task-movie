@@ -19,7 +19,7 @@ import { MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 let routers:Routes=[
@@ -53,6 +53,7 @@ let routers:Routes=[
     MatSlideToggleModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
 
   ],
   providers: [],
